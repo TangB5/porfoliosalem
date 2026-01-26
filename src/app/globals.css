@@ -1,26 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* =========================
+   THEME CONFIG (Tailwind v4)
+========================= */
+@theme {
+    /* Colors */
+    --color-cyber-green: #00ff41;
+    --color-cyber-blue: #00d9ff;
+    --color-cyber-pink: #ff0080;
+    --color-cyber-purple: #b400ff;
+
+    --color-dark-bg: #0a0e27;
+    --color-dark-surface: #1a1f3a;
+    --color-dark-border: #2a2f4a;
+
+    /* Fonts */
+    --font-sans: Inter, system-ui, sans-serif;
+    --font-display: "Space Grotesk", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+
+    /* Animations */
+    --animate-glow: glow 2s ease-in-out infinite alternate;
+    --animate-float: float 3s ease-in-out infinite;
+    --animate-slide-up: slideUp 0.5s ease-out;
+    --animate-fade-in: fadeIn 0.6s ease-out;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* =========================
+   KEYFRAMES
+========================= */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px var(--color-cyber-green),
+        0 0 10px var(--color-cyber-green),
+        0 0 15px var(--color-cyber-green);
+    }
+    100% {
+        box-shadow: 0 0 10px var(--color-cyber-green),
+        0 0 20px var(--color-cyber-green),
+        0 0 30px var(--color-cyber-green);
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+@layer base {
+    * {
+        border-color: var(--color-dark-border);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--color-dark-bg);
+        color: #f3f4f6;
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-display);
+    }
+}
+
+/* =========================
+   COMPONENTS
+========================= */
+@layer components {
+    /* Cyber grid background */
+    .cyber-grid {
+        background-image:
+                linear-gradient(to right, rgba(42, 47, 74, 0.5) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(42, 47, 74, 0.5) 1px, transparent 1px);
+        background-size: 50px 50px;
+    }
+
+    /* Neon text */
+    .neon-text {
+        text-shadow:
+                0 0 5px var(--color-cyber-green),
+                0 0 10px var(--color-cyber-green),
+                0 0 20px var(--color-cyber-green),
+                0 0 40px var(--color-cyber-green);
+    }
+
+    /* Cyber button */
+    .cyber-button {
+        position: relative;
+        padding: 0.75rem 1.5rem;
+        font-weight: 600;
+        color: var(--color-cyber-green);
+        border: 2px solid var(--color-cyber-green);
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .cyber-button::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--color-cyber-green);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: -1;
+    }
+
+    .cyber-button:hover::before {
+        transform: translateX(0);
+    }
+
+    .cyber-button:hover {
+        color: var(--color-dark-bg);
+    }
+
+    /* Cyber card */
+    .cyber-card {
+        background-color: var(--color-dark-surface);
+        border: 1px solid var(--color-dark-border);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .cyber-card:hover {
+        border-color: rgba(0, 255, 65, 0.5);
+        box-shadow: 0 0 20px rgba(0, 255, 65, 0.15);
+    }
+
+    /* Section container */
+    .section-container {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 4rem 1rem;
+    }
+
+    /* Gradient text */
+    .gradient-text {
+        background: linear-gradient(
+                to right,
+                var(--color-cyber-green),
+                var(--color-cyber-blue),
+                var(--color-cyber-pink)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+/* =========================
+   UTILITIES
+========================= */
+@layer utilities {
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: var(--color-dark-surface);
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(0, 255, 65, 0.3);
+        border-radius: 9999px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 255, 65, 0.5);
+    }
+}
+
+/* Selection */
+::selection {
+    background: rgba(0, 255, 65, 0.3);
+    color: white;
 }
