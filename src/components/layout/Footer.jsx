@@ -107,7 +107,7 @@ export default function Footer() {
                             <div className="flex items-center space-x-3 mb-4">
                                 <div className="relative">
                                     <div className="w-12 h-12 bg-cyber-green/10 border-2 border-cyber-green rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-cyber-green/20">
-                                        <span className="text-cyber-green font-bold text-xl font-display">JC</span>
+                                        <span className="text-cyber-green font-bold text-xl font-display">SK</span>
                                     </div>
                                 </div>
                                 <div>

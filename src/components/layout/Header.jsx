@@ -83,7 +83,7 @@ export default function Header() {
                         </div>
                         <div className="flex flex-col">
                             <span className="text-sm font-bold tracking-wider text-white group-hover:text-cyber-green transition-colors leading-none">
-                                SALEM <span className="text-cyber-green/70 text-[10px] font-mono ml-1">NGAMDERE</span>
+                                SALEM <span className="text-cyber-green/70 text-[10px] font-mono ml-1">KAWEINA</span>
                             </span>
                             <span className="text-[10px] text-gray-500 font-mono mt-1 flex items-center">
                                 <span className="w-1.5 h-1.5 bg-cyber-green rounded-full mr-2 animate-pulse" />
