@@ -10,7 +10,7 @@ import { FloatingNav, ProgressNav } from '@/components/layout/Navigation'
 
 export default function Home() {
     return (
-        <>
+        <div className="flex flex-col space-y-20">
             <ProgressNav />
             <Navigation />
             <FloatingNav />
@@ -21,6 +21,6 @@ export default function Home() {
             <Projects />
             <Certifications />
             <Contact />
-        </>
+        </div>
     )
 }

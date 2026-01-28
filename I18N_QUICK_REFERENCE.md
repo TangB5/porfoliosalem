@@ -70,7 +70,7 @@ For each section, add the translation hook and replace text.
 **Example Pattern:**
 ```jsx
 // Before:
-<h1>Hi, I'm John Cipher</h1>
+<h1>Hi, I'm Salem Kaweina Ngamdere</h1>
 
 // After:
 const { t } = useLanguage()

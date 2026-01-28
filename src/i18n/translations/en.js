@@ -15,7 +15,7 @@ export const en = {
     // Hero Section
     hero: {
         greeting: "Hi, I'm",
-        name: 'John Cipher',
+        name: 'Salem Kaweina Ngamdere',
         role: 'Senior SOC Analyst',
         tagline: 'Defending Digital Assets. Detecting Threats. Delivering Security.',
         availability: 'Available for Opportunities',

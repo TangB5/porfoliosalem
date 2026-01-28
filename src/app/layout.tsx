@@ -2,27 +2,27 @@ import './globals.css'
 import '../styles/animations.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import { ProgressNav } from '@/components/layout/Navigation'
+import Navigation, { ProgressNav } from '@/components/layout/Navigation'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata = {
-    title: 'John Cipher | Senior SOC Analyst & Cybersecurity Professional',
-    description: 'Portfolio of John Cipher - Senior SOC Analyst specializing in threat detection, incident response, SIEM platforms, and security operations. 5+ years of experience protecting digital infrastructure. | Portfolio de John Cipher - Analyste SOC senior spécialisé en détection des menaces, réponse aux incidents, plateformes SIEM et opérations de sécurité.',
+    title: 'Salem Kaweina Ngamdere | Senior SOC Analyst & Cybersecurity Professional',
+    description: 'Portfolio of Salem Kaweina Ngamdere - Senior SOC Analyst specializing in threat detection, incident response, SIEM platforms, and security operations. 5+ years of experience protecting digital infrastructure. | Portfolio de Salem Kaweina Ngamdere - Analyste SOC senior spécialisé en détection des menaces, réponse aux incidents, plateformes SIEM et opérations de sécurité.',
     keywords: 'SOC Analyst, Cybersecurity, Incident Response, Threat Detection, SIEM, Security Operations, Threat Hunting, Malware Analysis, Security Automation, Splunk, CrowdStrike, Analyste SOC, Cybersécurité, Réponse aux incidents, Détection des menaces',
-    authors: [{ name: 'John Cipher' }],
-    creator: 'John Cipher',
-    publisher: 'John Cipher',
+    authors: [{ name: 'Salem Kaweina Ngamdere' }],
+    creator: 'Salem Kaweina Ngamdere',
+    publisher: 'Salem Kaweina Ngamdere',
     openGraph: {
-        title: 'John Cipher | Senior SOC Analyst Portfolio',
+        title: 'Salem Kaweina Ngamdere | Senior SOC Analyst Portfolio',
         description: 'Senior SOC Analyst specializing in threat detection, incident response, and security operations | Analyste SOC senior spécialisé en détection des menaces et réponse aux incidents',
         type: 'website',
         locale: 'en_US',
         alternateLocale: ['fr_FR'],
-        siteName: 'John Cipher Portfolio',
+        siteName: 'Salem Kaweina Ngamdere Portfolio',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'John Cipher | Senior SOC Analyst',
+        title: 'Salem Kaweina Ngamdere | Senior SOC Analyst',
         description: 'Senior SOC Analyst specializing in threat detection and incident response',
         creator: '@johncipher',
     },
@@ -90,8 +90,8 @@ export default function RootLayout({
                     />
                 </div>
 
-                {/* Header */}
-                <Header />
+                <Navigation/>
+                <Header/>
 
                 {/* Main Content */}
                 <main className="flex-grow relative z-10">

@@ -112,7 +112,7 @@ export default function Footer() {
                                 </div>
                                 <div>
                                     <div className="text-lg font-display font-bold text-white group-hover:text-cyber-green transition-colors">
-                                        John Cipher
+                                        Salem Kaweina Ngamdere
                                     </div>
                                     <div className="text-xs text-gray-400 font-mono">SOC Analyst</div>
                                 </div>
@@ -252,7 +252,7 @@ export default function Footer() {
                     <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
                         {/* Copyright */}
                         <div className="text-sm text-gray-400 flex items-center space-x-2">
-                            <span>© {currentYear} John Cipher.</span>
+                            <span>© {currentYear} Salem Kaweina Ngamdere.</span>
                             <span className="hidden sm:inline">{t.footer.allRightsReserved}</span>
                             <Badge variant="outline" size="sm" className="ml-2">
                                 v1.0.0

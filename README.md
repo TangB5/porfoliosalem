@@ -383,7 +383,7 @@ MIT License - Feel free to use this template for your personal portfolio
 
 ## 👤 Author
 
-**John Cipher**
+**Salem Kaweina Ngamdere**
 - Portfolio: [Your Portfolio URL]
 - LinkedIn: [Your LinkedIn]
 - GitHub: [Your GitHub]
