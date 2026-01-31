@@ -16,7 +16,7 @@ export const en = {
     hero: {
         greeting: "Hi, I'm",
         name: 'Salem Kaweina Ngamdere',
-        role: 'Senior SOC Analyst',
+        role: 'Junior SOC Analyst',
         tagline: 'Defending Digital Assets. Detecting Threats. Delivering Security.',
         availability: 'Available for Opportunities',
         yearsExp: 'Years Exp.',
