@@ -9,9 +9,8 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 // --- 1. CONFIGURATION (Données Statiques) ---
 const STATS = (t) => [
-    { label: t.hero.yearsExp, value: '5+', color: 'text-cyber-green' },
-    { label: t.hero.incidents, value: '1000+', color: 'text-cyber-blue' },
-    { label: t.hero.certifications, value: '8', color: 'text-cyber-pink' },
+    { label: t.hero.yearsExp, value: '3+', color: 'text-cyber-green' },
+    { label: t.hero.certifications, value: '3', color: 'text-cyber-pink' },
 ]
 
 const SECURITY_LOGS = [

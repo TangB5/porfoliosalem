@@ -48,8 +48,8 @@ export default function Contact() {
                 </svg>
             ),
             title: 'Email',
-            value: 'john.cipher@securitypro.com',
-            link: 'mailto:john.cipher@securitypro.com',
+            value: 'salemkawein65@gmail.com',
+            link: 'mailto:salemkawein65@gmail.com',
             color: 'cyber-green'
         },
         {
@@ -60,7 +60,7 @@ export default function Contact() {
             ),
             title: 'LinkedIn',
             value: 'linkedin.com/in/johncipher',
-            link: 'https://linkedin.com/in/johncipher',
+            link: 'https://linkedin.com/in/salem-kaweina-ngamdere-34ab6230a',
             color: 'cyber-blue'
         },
         {

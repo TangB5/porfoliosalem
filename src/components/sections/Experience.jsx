@@ -28,7 +28,8 @@ export default function Experience() {
                 </FadeIn>
 
                 {/* Statistics */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+                <div className="w-full  place-items-center">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
                     {statistics.map((stat, index) => (
                         <FadeIn key={index} delay={0.1 + index * 0.1}>
                             <Card hover className="text-center">
@@ -40,6 +41,8 @@ export default function Experience() {
                         </FadeIn>
                     ))}
                 </div>
+                </div>
+                
 
                 {/* Experience Timeline */}
                 <div className="grid lg:grid-cols-12 gap-8">
